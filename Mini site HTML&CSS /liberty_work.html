@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini site HTML</title>
+    <style>
+        li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 10px 0 10px;
+        }
+        ul{
+            text-align: center;
+            padding: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            color: blue;
+        }
+        #nav_bar{
+            margin-top: 0px;
+            background-color:cornflowerblue;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+            }
+            
+        th {
+        padding: 18px;
+        }
+        
+        td {
+        padding: 12px;
+        }
+        
+        th,
+        td {
+        border: solid 1px #e6e6e6;
+        }
+        
+        tr {
+        background-color: grey;
+        }
+        
+        tr.even {
+        background-color: silver;
+        }
+        
+        #heading {
+        background-color: black;
+        color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- START Header -->
+     <section id="nav_bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="liberty_work.html">Literary work</a></li>
+            <li><a href="early_life_and_education.html">Early life and education</a></li>
+            <li><a href="pupin_coils.html">Pupin coils</a></li>
+        </ul>
+    </section>
+    <!-- END Header -->
+
+    <!-- START Content -->
+    <section>
+        <header>
+            <h1>Literary work</h1>
+        </header>
+        <div>
+            <p>Besides his patents he published several dozen scientific disputes,
+                articles, reviews and a 396-page autobiography under the name Michael Pupin,
+                From Immigrant to Inventor (Scribner's, 1923).
+                He won the annual Pulitzer Prize for Biography or Autobiography. 
+                It was published in Serbian in 1929 under the title
+                From pastures to scientist (Od pašnjaka do naučenjaka).</p>
+                <p>Beside this he also published:</p>
+        </div>
+        <table>
+            <tr id="heading">
+                <th>Title</th>
+                <th>Publishing house</th>
+                <th>Place</th>
+                <th>Year</th>
+            </tr>
+            <tr class="even">
+                <td>Der Osmotische Druch und seine Beziehung zur Freien Energie</td>
+                <td>Gustav Shade</td>
+                <td>Berlin</td>
+                <td>1889</td>
+            </tr>
+            <tr>
+                <td>Thermodynamics of Reversible Cycles in Gases and Saturated Vapors</td>
+                <td>John Wiley & Sons</td>
+                <td></td>
+                <td>1894</td>
+            </tr>
+            <tr class="even">
+                <td>Serbian Orthodox Church</td>
+                <td>J. Murray</td>
+                <td>London</td>
+                <td>1918</td>
+            </tr>
+            <tr>
+                <td>Yugoslavia</td>
+                <td>American Association for International Conciliation</td>
+                <td>In Association for International Conciliation Amer. Branch —Yugoslavia</td>
+                <td>1919</td>
+            </tr>
+            <tr class="even">
+                <td>The New Reformation</td>
+                <td>Scribner</td>
+                <td>New York</td>
+                <td>1927</td>
+            </tr>
+            <tr>
+                <td>Romance of the Machine</td>
+                <td>Scribner</td>
+                <td>New York</td>
+                <td>1930</td>
+            </tr>
+            <tr class="even">
+                <td>Discussion by M. Pupin and other prominent engineers in “Toward Civilization</td>
+                <td>C. A. Beard. Longmans, Green& Co</td>
+                <td>New York</td>
+                <td>1930</td>
+            </tr>
+        </table>
+    </section>
+    <!-- END Content -->
+</body>
+</html>

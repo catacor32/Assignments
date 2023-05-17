@@ -1,0 +1,29 @@
+
+#sec_header{
+    display: inline-block;
+    width: 400px;
+    border: 1px solid black;
+    position: absolute;
+}
+#sec_content{
+    display: inline-block;
+    width: 800px;
+    text-align: center;
+    border: 1px solid black;
+    position: relative;
+    left: 420px;
+}
+ul{
+   list-style: none;
+   text-align: center;
+}
+#p2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.p1{
+    font-style: oblique;
+    font-size: larger;
+}
+.p3{
+    font-family: 'Dancing Script', cursive;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul Volum Cilindru</title>
+</head>
+<body>
+    <script>
+        let r = parseInt(prompt("Introduceti raza bazei cilindrului:"));
+        let h = parseInt(prompt("Introduceti inaltimea:"));
+        let pi = Math.PI;
+
+        r = Math.pow(r,2);
+
+        let v = r * pi * h;
+
+        // prompt("Volumul cilindrului este:", v);
+        document.write("Volumul cilindrului este: ", v)
+    </script>
+</body>
+</html>

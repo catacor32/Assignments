@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aricmetica de baza</title>
+</head>
+<body>
+    <script>
+        
+        let nr1 = parseFloat(prompt("Introduceti primul numar:"));
+        let op = prompt("Introduceti operatia dorita:");
+        let nr2 = parseFloat(prompt("Introduceti al doilea numar:"));
+ 
+        let adunare = nr1 + nr2;
+        let scadere = nr1 - nr2;
+        let inmultire = nr1 * nr2;
+        let impartire = nr1 / nr2;
+
+
+
+
+        // if(op == "+"){
+        //     alert("Rezultatul adunarii este: " + adunare);
+        // } else if(op == "-"){
+        //     alert("Rezultatul scaderii este: " + scadere);
+        // }else if(op == "*"){
+        //     alert("Rezultatul inmultii este: " + inmultire);
+        // }else if(op == "/"){
+        //     alert("Rezultatul impartieii este: " + impartire);
+        // }
+
+        switch(op) {
+            case "+": 
+                alert("Rezultatul adunarii este: " + adunare.toFixed(2));
+                break
+
+            case "-": 
+                alert("Rezultatul scaderii este: " + scadere.toFixed(2));
+                break
+
+            case "*": 
+                alert("Rezultatul inmultii este: " + inmultire.toFixed(2));
+                break
+            
+            case "/":
+                if (nr2 == 0){
+                    alert("Can't divide by zero")
+                    throw Error("Can't divide by zero")
+                }else{
+                    alert("Rezultatul impartieii este: " + impartire.toFixed(2));
+                }
+                break
+        }
+
+    </script>
+</body>
+</html>
