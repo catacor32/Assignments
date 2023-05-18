@@ -1,57 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let firstNumberValue = prompt('Introdu primul numar:');
+      let operator = prompt('Introdu operatorul( +, -, * sau / )');
+      let secondNumberValue = prompt('Introdu al doilea numar:');
 
-<head>
-    <meta charset="UTF-8">
-    <title>Advanced CSS - Assignment 1</title>
-    <style>
-        a[href^="https://www.google.com"] { 
-            color: green; 
-        }
+      let firstNumber = parseFloat(firstNumberValue);
+      let secondNumber = parseFloat(secondNumberValue);
+      if(isNaN(firstNumber) || isNaN(secondNumber) ||
+      ("" + firstNumber).length != firstNumberValue.length || ("" + secondNumber).length != secondNumberValue.length){
+            alert("Valoarea unuia din operanzi nu este numerica!");
+      }
+      else{
+        switch (operator) {
+                case '+':
+                alert(firstNumber + secondNumber);
 
-        a[target]{
-            color: red;
-        }
+                break;
+                case '-':
+                alert(firstNumber - secondNumber);
 
-        #second-div>p:nth-child(even){
-            color: red;
-        }
+                break;
+                case '*':
+                alert(firstNumber * secondNumber);
 
-        #second-div p:nth-child(odd){
-            color: blue;
-        }
+                break;
 
-        #first-div > p::after{
-            content: "-NEW";
-            color: yellow;
-        }
-        body > p:last-child:hover{
-            font-style: italic;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>Main Heading</h1>
-    <p>Paragraph 1</p>
-    <a href="https://www.google.com/">Google</a>
-    <a href="https://www.google.com/doodles">Google Doodles</a>
-    <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
-    <div id="first-div">
-        <h2>Subheading</h2>
-        <p>Paragraph 2</p>
-        <p>Paragraph 3</p>
-        <div id="second-div">
-            <h3>Sub subheading</h3>
-            <p>Paragraph 4</p>
-            <p>Paragraph 5</p>
-            <p>Paragraph 6</p>
-            <p>Paragraph 7</p>
-            <p>Paragraph 8</p>
-        </div>
-    </div>
-    <p>Paragraph 9</p>
-    <p>Paragraph 10</p>
-</body>
-
+                case '/':
+                if(secondNumber == 0){
+                    alert("Impartirea prin 0 nu se poate realiza");
+                }
+                else{
+                    alert(firstNumber / secondNumber);
+                }
+                
+                break;
+                
+                default:
+                    alert("Operatia " + operator + " nu este una elementara");
+            }
+      }
+    </script>
+  </body>
 </html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animatie</title>
+    <style>
+
+        #box{
+            background-color: #050210;
+            width: 500px;
+            height: 400px;
+            margin: 10px auto;
+            position: relative;
+        }
+        #box::after{
+            position: absolute;
+            left: 27%;
+            top: 17.3%;
+            width: 230px;
+            height: 230px;
+            content: "";
+            background-color: #050210;
+            border-radius: 50%;
+        }
+        #box::before{
+            z-index: 1;
+            position: absolute;
+            top:46%;
+            left:50%;
+            content: "";
+            width:1px;
+            height:1px;
+            border-radius: 50%;
+            background-color: #231b3e69;
+            background-position: center;
+            animation: radia 1.2s linear infinite; 
+
+        }
+        #colors{
+            position: absolute;
+            left: 25%;
+            top: 15%;
+            width: 250px;
+            height: 250px;
+            content: "";
+            border-radius: 50%;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            animation: rotate 1s linear infinite;
+        }
+
+        #colors::before{
+            position: absolute;
+            top: -11px;
+            left: -12px;
+            filter: blur(20px);
+            width: 270px;
+            height: 270px;
+            content: "";
+            border-radius: 100%;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            border: 2px solid red;
+        }
+
+        @keyframes radia {
+            0%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(230);
+            }
+            
+        }
+
+        @keyframes rotate {
+            25%{
+                rotate: 90deg;
+            }
+            50%{
+                rotate: 180deg;
+            }
+            75%{
+                rotate: 270deg;
+            }
+            100%{
+                rotate: 360deg;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="box">
+        <div id="radi"></div>
+        <div id="colors"></div>
+    </div>
+
+</body>
+</html>
