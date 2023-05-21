@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crearea unei galerii responsive</title>
+    <style>
+        body{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .container{
+            max-width: 960px;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .row {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        }
+        .column {
+            flex-basis: 20%;
+            box-sizing: border-box;
+            padding: 8px;
+            }
+        img{
+            width: 13.7vw;
+        }
+        .box{
+            background: linear-gradient(cornflowerblue 83%, rgb(238, 238, 238) 23%);
+            border-radius: 5px;
+            text-align: center;
+        }
+        header{
+            width: 100%;
+            margin: 9px;
+        }
+        @media screen and (max-width: 1024px) {
+            .column {
+                flex-basis: 33%;
+            }
+            img{
+                width: 23vw;
+            }
+            .box{
+                font-size: 3vw;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .column {
+                flex-basis: 50%;
+            }
+            img{
+                width: 36vw;
+            }
+            .box{
+                font-size: 4vw;
+            }
+        }
+        @media screen and (max-width: 414px) {
+            .column {
+                flex-basis: 100%;
+            }
+            img{
+                width: 70vw;
+            }
+            .box{
+                font-size: 8vw;
+            }
+        } 
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Gallery Heading</h2>
+        </header>
+        <div class="row">
+            <div class="column">
+                <div class="box"> <img src="placeholder-image.png" alt="placeholder">Image Title</div>
+            </div>
+            <div class="column">
+                <div class="box"> <img src="placeholder-image.png" alt="placeholder">Image Title</div>
+            </div>
+            <div class="column">
+                <div class="box"> <img src="placeholder-image.png" alt="placeholder">Image Title</div>
+            </div>
+            <div class="column">
+                <div class="box"> <img src="placeholder-image.png" alt="placeholder">Image Title</div>
+            </div>
+            <div class="column">
+                <div class="box"> <img src="placeholder-image.png" alt="placeholder">Image Title</div>
+            </div>
+            <div class="column">
+                <div class="box"> <img src="placeholder-image.png" alt="placeholder">Image Title</div>
+            </div>
+            <div class="column">
+                <div class="box"> <img src="placeholder-image.png" alt="placeholder">Image Title</div>
+            </div>
+            <div class="column">
+                <div class="box"> <img src="placeholder-image.png" alt="placeholder">Image Title</div>
+            </div>
+            <div class="column">
+                <div class="box"> <img src="placeholder-image.png" alt="placeholder">Image Title</div>
+            </div>
+            <div class="column">
+                <div class="box"> <img src="placeholder-image.png" alt="placeholder">Image Title</div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Aspernatur soluta perspiciatis neque inventore eius ducimus praesentium 
+                iure tenetur accusantium magni officia quis, id repudiandae illum veritatis nesciunt? 
+                Id, error saepe. Cumque pariatur officia, magnam quae dolorem doloribus distinctio 
+                excepturi quod ducimus enim architecto. Deleniti aliquam reiciendis corporis? Qui quasi 
+                impedit esse asperiores ut dolore temporibus atque odit maxime! Sit, accusamus?</p>
+        </div>
+    </div>
+</body>
+</html>
