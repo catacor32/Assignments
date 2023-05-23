@@ -1,0 +1,16 @@
+#hero::before{
+    content: "We strive to make all of our creations exquisite.";
+    position: absolute;
+    background-color: rgb(71 169 71 / 100%);
+    padding: 7px;
+    top: 6vw;
+    font-size: 20px;
+    left: 10vw;
+    color: white;
+}
+#footer{
+    background-color: rgb(37, 37, 37);
+}
+#footerTofooter {
+    background-color: rgb(23, 23, 23);
+}

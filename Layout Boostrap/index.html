@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Boostrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg navbar-light p-3" role="navigation">
+        <a href="#"
+            class="d-flex align-items-center  mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <span class="fs-4 link-secondary">My Website</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="colapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-felx justify-content-end" id="navbarlinks">
+            <ul class="nav nav-pills small">
+                <li class="nav-item "><a href="#" class="nav-link link-secondary">Home</a></li>
+                <li class="nav-item "><a href="#" class="nav-link link-secondary">Portofolio</a></li>
+                <li class="nav-item "><a href="#" class="nav-link link-secondary">Staff</a></li>
+                <li class="nav-item "><a href="#" class="nav-link link-secondary">Features</a></li>
+                <li class="nav-item "><a href="#" class="nav-link link-secondary">Blog</a></li>
+                <li class="nav-item "><a href="#" class="nav-link link-secondary">Contact</a></li>
+                <li class="nav-item "><a href="#" class="nav-link link-secondary">Download</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="hero" class="position-relative">
+        <img id="heroimg" class="img-fluid" src="imgs/hero.jpg" alt="hero">
+    </div>
+
+    <div class="container px-4 py-5">
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+            <div class="feature col d-flex flex-column align-items-center text-center">
+                <div class="feature-icon fs-2 mb-3">
+                    <img src="imgs/icon-1.png" alt="icon-1">
+                </div>
+                <h3 class="fs-2">Purpose</h3>
+                <p class="text-secondary ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim iure explicabo excepturi 
+                    corporis a nemo aut consectetur, natus facere neque inventore nulla et exercitationem 
+                </p>
+            </div>
+            <div class="feature col d-flex flex-column align-items-center text-center">
+                <div class="feature-icon  fs-2 mb-3">
+                    <img src="imgs/icon-2.png" alt="icon-2">
+                </div>
+                <h3 class="fs-2">Quality</h3>
+                <p class="text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, eos quod error
+                    ut,
+                    id praesentium magni nam inventore, delectus illum earum ratione? Non commodi itaque.</p>
+            </div>
+            <div class="feature col d-flex flex-column align-items-center text-center">
+                <div class="feature-icon  fs-2 mb-3">
+                    <img src="imgs/icon-3.png" alt="icon-3">
+                </div>
+                <h3 class="fs-2">Function</h3>
+                <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel ratione
+                    molestiae voluptatum,
+                    exercitationem eum dignissimos recusandae itaque, suscipit nihil quibusdam.</p>
+            </div>
+            <div class="feature col d-flex flex-column align-items-center text-center">
+                <div class="feature-icon fs-2 mb-3">
+                    <img src="imgs/icon-4.png" alt="icon-4">
+                </div>
+                <h3 class="fs-2">Elegant</h3>
+                <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel ratione
+                    molestiae voluptatum,
+                    exercitationem eum dignissimos recusandae itaque, suscipit nihil quibusdam.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 py-5" id="custom-cards">
+        <h4 class="pb-2 border-bottom text-uppercase">Recet work</h4>
+
+        <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 align-items-stretch g-4 py-5 ">
+            <div class="col ">
+                <div class="d-flex flex-column">
+                    <img class="img-fluid" src="imgs/bike-400x340.jpg" alt="bike">
+                    <p class="mt-3 h5">Green Bike</p>
+                    <p class="text-secondary small">Beatiful, Travel</p>
+                </div>
+            </div>
+
+            <div class="col ">
+                <div class="d-flex flex-column">
+                    <img class="img-fluid" src="imgs/surf-400x340.jpg" alt="surf">
+                    <p class="mt-3 h5">Salt of The Earth</p>
+                    <p class="text-secondary small">Beatiful, Travel</p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="d-flex flex-column">
+                    <img class="img-fluid" src="imgs/hills-400x340.jpg" alt="hills">
+                    <p class="mt-3 h5">Mountain Hight</p>
+                    <p class="text-secondary small">Travel</p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="d-flex flex-column">
+                    <img class="img-fluid" src="imgs/path-400x340.jpg" alt="path">
+                    <p class="mt-3 h5">When a Tree Falls</p>
+                    <p class="text-secondary small">Beatiful</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 py-5" id="custom-cards">
+        <h4 class="pb-2 border-bottom text-uppercase">From the blog</h4>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div>
+                    <img class="img-fluid" src="imgs/cow-640x340.jpg" alt="cow">
+                </div>
+                <div>
+                    <p class="mt-3 h5">How Now</p>
+                    <p class="text-secondary small">Posted on Octomber 28,2020</p>
+                    <p class="text-secondary small text-wrap text-truncate">Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit.Asperiores,
+                        sint adipisci. Quae doloremque nobis eum, dolor quisquam magnam. Ratione
+                        deserunt sapiente quas repellendus iste iure voluptates cupiditate,
+                        perferendis quam unde.</p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div>
+                    <img class="img-fluid" src="imgs/sunrise-640x340.jpg" alt="sunrise">
+                </div>
+                <div>
+                    <p class="mt-3 h5">Adrif by Simon Christen</p>
+                    <p class="text-secondary small">Posted on September 29,2020</p>
+                    <p class="text-secondary small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, cum
+                        fuga.
+                        Laboriosam ea quos veritatis temporibus rerum, id qui, suscipit saepe,
+                        perspiciatis quasi debitis sequi minima perferendis facilis ut maiores!</p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div>
+                    <img class="img-fluid" src="imgs/grass-640x340.jpg" alt="grass">
+                </div>
+                <div>
+                    <p class="mt-3 h5">A Walk In The Park</p>
+                    <p class="text-secondary small">Posted on August 10,2020</p>
+                    <p class="text-secondary small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde,
+                        reiciendis
+                        ratione consequatur qui amet error quia ab pariatur nemo atque sed adipisci
+                        voluptas praesentium suscipit officiis explicabo. Deleniti, eos sapiente?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class=" container">
+            <div class="row row-cols-1 row-cols-1 row-cols-lg-3 py-5">
+                <div class="col mb-5">
+                    <h5 class="text-white">My Website</h5>
+                    <p class="text-secondary small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia expedita 
+                        optio dicta ullam architecto totam laboriosam placeat distinctio fugiat est 
+                        ipsam aliquid animi aut consectetur, maxime, enim beatae laudantium cum?</p>
+                </div>
+
+                <div class="col mb-5">
+                    <h5 class="text-white">Recent Post</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-secondary text-capitalize border-top border-secondary">How Now</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-secondary text-capitalize border-top border-secondary">
+                                Adrif by Simon Christen</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-secondary text-capitalize border-top border-secondary">
+                                A Walk In The Park</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-secondary text-capitalize border-top border-secondary">
+                                Time To Think</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-secondary text-capitalize border-top border-secondary">
+                                field of dreams</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col mb-5">
+                    <h5 class="text-white">Recent Work</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-secondary border-top border-secondary">Beautiful</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-secondary border-top border-secondary">Travel</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-secondary border-top border-secondary">Surreal</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-secondary border-top border-secondary">Thoughts</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-secondary border-top border-secondary">Unique</a>
+                        </li>
+                    </ul>
+                </div>
+            </fdiv>
+        </div>
+    </footer>
+    <footer id="footerTofooter" >
+        <p class="text-center text-secondary m-0 p-3">© 2023 Company, Inc</p>
+    </footer>
+</body>
+
+</html>
