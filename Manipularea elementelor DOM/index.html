@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 2 - Website Building</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/6522f60921.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div id="login-container">
+            <form>
+                <div>
+                    <label for="username">Username:</label>
+                    <input id="username" type="text">
+                </div>
+
+                <div>
+                    <label for="password">Password:</label>
+                    <input id="password" type="password">
+                </div>
+
+                <input type="submit" value="Login">
+            </form>
+        </div>
+
+        <script>
+
+            let username = $('#username');
+            let password = $('#password');
+            let submit = $('[value="Login"]');
+
+            $(document).ready(function(){
+
+                submit.on('click', function(e){
+                    e.preventDefault();
+
+                    let valUsername = username.val();
+                    let valPassword = password.val();
+                     
+                    let verificationUsername = valUsername == "new_user" ? true : false; 
+                    let verificationPassword = valPassword == 123456789 ? true : false;
+
+                    // if (verificationUsername == true) {
+                    //     username.removeClass("invalid");
+                    //     username.addClass("valid");
+                    //     username.next().remove();
+                    //     username.after("<i class='fa-sharp fa-solid fa-check fa-xl '' style='color: #008000;'></i>")
+                    // }else{
+                    //     username.removeClass("valid");
+                    //     username.addClass("invalid");
+                    //     username.next().remove();
+                    //     username.after("<i class='fa-sharp fa-solid fa-xmark fa-xl' style='color: #ff0000;'></i>")
+                    // }
+
+                    // if (verificationPassword == true) {
+                    //     password.removeClass("invalid");
+                    //     password.addClass("valid");
+                    //     password.next().remove();
+                    //     password.after("<i class='fa-sharp fa-solid fa-check fa-xl '' style='color: #008000;'></i>")
+                    // }else{
+                    //     password.removeClass("valid");
+                    //     password.addClass("invalid");
+                    //     password.next().remove();
+                    //     password.after("<i class='fa-sharp fa-solid fa-xmark fa-xl' style='color: #ff0000;'></i>")
+                    // }
+
+                    switch(verificationPassword){
+                        case true:
+                            password.removeClass("invalid");
+                            password.addClass("valid");
+                            password.next().remove();
+                            password.after("<i class='fa-sharp fa-solid fa-check fa-xl '' style='color: #008000;'></i>");
+                            break
+
+                        default:
+                            if(valPassword == ""){
+                                    $(".invalid-pasword").remove();
+                                    submit.after("<p class='invalid-pasword'>*Please enter a password</p>")
+                                }else{
+                                    $(".invalid-pasword").remove();
+                                    submit.after("<p class='invalid-pasword'>*Please enter a valid password</p>")
+                                }
+                            password.removeClass("valid");
+                            password.addClass("invalid");
+                            password.next().remove();
+                            password.after("<i class='fa-sharp fa-solid fa-xmark fa-xl' style='color: #ff0000;'></i>");
+                            break
+                    }
+                    
+
+                    switch(verificationUsername){
+                        case true:
+                            username.removeClass("invalid");
+                            username.addClass("valid");
+                            username.next().remove();
+                            $(".success").remove();
+                            username.after("<i class='fa-sharp fa-solid fa-check fa-xl '' style='color: #008000;'></i>");
+                            break
+                        
+                        default:
+                            if(valUsername == ""){
+                                $(".invalid-username").remove();
+                                $(".success").remove();
+                                submit.after("<p class='invalid-username'>*Please enter a username</p>")
+                            }else{
+                                $(".invalid-username").remove();
+                                $(".success").remove();
+                                submit.after("<p class='invalid-username'>*Please enter a valid username</p>")
+                            }
+                            username.removeClass("valid");
+                            username.addClass("invalid");
+                            username.next().remove();
+                            $(".success").remove();
+                            username.after("<i class='fa-sharp fa-solid fa-xmark fa-xl' style='color: #ff0000;'></i>");
+                            break
+                    }
+
+                    if (verificationUsername == true && verificationPassword == true) {
+                        $(".invalid-pasword").remove();
+                        $(".invalid-username").remove();
+                        $(".success").remove();
+                        submit.after("<p class='success'>*Successful login!</p>")
+                    }
+                })
+            })
+           
+            
+        </script>
+    </body>
+</html>

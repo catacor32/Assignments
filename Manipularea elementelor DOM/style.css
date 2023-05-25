@@ -1,0 +1,41 @@
+body {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#login-container {
+    width: 460px;
+    margin: 0 auto;
+}
+
+form label,
+form input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form input {
+    padding: 8px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form div {
+    margin: 16px 0px;
+    height: 54px;
+}
+.invalid {
+    border: 2px solid red;
+
+}
+.valid {
+    border: 2px solid green;
+}
+i{
+    position: relative;
+    bottom: 27px;
+    left: 94%;
+    margin: 0;
+}
