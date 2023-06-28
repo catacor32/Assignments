@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citirea datelor</title>
+    <style>
+        li{
+            list-style: none;;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <ul>
+            <li class="name"></li>
+            <li class="address"></li>
+            <li class="telefon"></li>
+            <li class="curs"></li>
+        </ul>
+        <ul>
+            <li class="name"></li>
+            <li class="address"></li>
+            <li class="telefon"></li>
+            <li class="curs"></li>
+        </ul>
+        <ul>
+            <li class="name"></li>
+            <li class="address"></li>
+            <li class="telefon"></li>
+            <li class="curs"></li>
+        </ul>
+        <ul>
+            <li class="name"></li>
+            <li class="address"></li>
+            <li class="telefon"></li>
+            <li class="curs"></li>
+        </ul>
+        <ul>
+            <li class="name"></li>
+            <li class="address"></li>
+            <li class="telefon"></li>
+            <li class="curs"></li>
+        </ul>
+    </div>
+
+    <script>
+        let li = document.getElementsByTagName("li")
+
+        class Student {
+            constructor(name, address, phone, course) {
+                this.name = `Name: ${name}`;
+                this.address = `Address: ${address}`;
+                this.phone = `Phone: ${phone}`;
+                this.course = `Course: ${course}`;
+            }
+
+            getInfo() {
+                return `My name is ${this.name}, I live on ${this.address}, my phone is ${this.phone}` + " " +
+                    `and I follow ${this.course} courses.`;
+            }
+        }
+
+
+        (async function getData() {
+            try {
+                let respons = await fetch("https://v-dresevic.github.io/Advanced-JavaScript-Programming/data/students.txt");
+                if (respons.status !== 200) {
+                    throw new Error("Fetching data failed");
+                }
+
+                let text = await respons.text();
+                let data = await text.split("\n");
+
+                let student1 = new Student (data[0], data[1], data[2],data[3]);
+                let student2 = new Student (data[4], data[5], data[6],data[7]);
+                let student3 = new Student (data[8], data[9], data[10],data[11]);
+                let student4 = new Student (data[12], data[13], data[14],data[15]);
+                let student5 = new Student (data[16], data[17], data[18],data[19]);
+
+                var student1Arr = Object.values(student1)
+                var student2Arr = Object.values(student2)
+                var student3Arr = Object.values(student3)
+                var student4Arr = Object.values(student4)
+                var student5Arr = Object.values(student5)
+
+                let listaStudenti = student1Arr.concat(student2Arr, student3Arr, student4Arr, student5Arr);
+
+
+                for (let i = 0; i < 4; i++) {
+                    li[i].innerHTML = listaStudenti[i];
+                }
+
+                for (let i = 4; i < 8; i++) {
+                    li[i].innerHTML = listaStudenti[i]
+                }
+
+                for (let i = 8; i < 12; i++) {
+                    li[i].innerHTML = listaStudenti[i]
+                }
+
+                for (let i = 12; i < 16; i++) {
+                    li[i].innerHTML = listaStudenti[i]
+                }
+
+                for (let i = 16; i < 20; i++) {
+                    li[i].innerHTML = listaStudenti[i]
+                }
+                
+            } catch (err) {
+                console.error(err); // Handle or log the error
+                return null; // Return a default value in case of an error
+            }
+
+        })();
+
+
+    </script>
+</body>
+
+</html>
