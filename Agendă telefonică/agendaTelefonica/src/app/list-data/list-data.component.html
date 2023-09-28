@@ -1,0 +1,24 @@
+<div class="container mt-3">
+  <h3>View Contacts</h3>
+  <table class="table table-striped" ngModel>
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nume</th>
+          <th scope="col">Prenume</th>
+          <th scope="col">Telefon</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users" [attr.id]="user.id">
+          <td> {{ user.id }} </td>
+          <td> {{ user.nume }} </td>
+          <td> {{ user.prenume }} </td>
+          <td> {{ user.telefon }} </td>
+          <td>
+            <button type="button" class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+</div>

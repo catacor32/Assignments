@@ -1,0 +1,8 @@
+<div [ngClass]="{'header-cell': true, 'inactive-header-cell' : this.tapsServices.activeTap !== 1}"
+     id="tab-1" (click)="this.tapsServices.changeTab(1)"></div>
+
+<div [ngClass]="{'header-cell': true, 'inactive-header-cell' : this.tapsServices.activeTap !== 2}" 
+    id="tab-2" (click)="this.tapsServices.changeTab(2)"></div>
+
+<div [ngClass]="{'header-cell': true, 'inactive-header-cell' : this.tapsServices.activeTap !== 3}" 
+    id="tab-3" (click)="this.tapsServices.changeTab(3)"></div>
